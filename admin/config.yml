@@ -1,0 +1,70 @@
+backend:
+  name: git-gateway
+  branch: production
+
+media_folder: "static/images/uploads"  # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - label: 'Pages'
+    name: 'Pages'
+    files:
+      - label: "Music"
+        name: "music"
+        format: "json"
+        file: 'content/music/music.json'
+        fields:
+          - label: "Albums"
+            name: "albums"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: Image, name: thumbnail, widget: image}
+              - {label: ThumbnailLlink, name: thumbnailLink, widget: "string"}
+              - label: "Songs"
+                name: "songs"
+                widget: "list"
+                fields:
+                  - {label: "Number and Name", name: "title", widget: "string"}
+              - label: "links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}             
+      - label: "Videos"
+        name: "video"
+        format: "json"
+        file: 'content/videos/videos.json'
+        fields:
+          - label: "Videos"
+            name: "videosArray"
+            widget: "list"
+            fields:
+              - {label: "Link", name: "link", widget: "string"}                  
+      - label: "Shows"
+        name: "shows"
+        format: "json"
+        file: 'content/shows/shows.json'
+        fields:
+          # - {label: Shows Image, name: thumbnail, widget: image}
+          - label: "Shows"
+            name: "showsArray"
+            widget: "list"
+            fields:
+              - {label: Date, name: date, widget: datetime, default: "", dateFormat: "DD.MM.YYYY", format: "ddd DD MMM", timeFormat: false}
+              - {label: Place, name: place, widget: string}
+              - {label: City, name: city, widget: string}
+              - {label: linkName, name: linkName, widget: string}
+              - {label: linkURL, name: linkURL, widget: string}
+      - label: "Bio"
+        name: "bio"
+        format: "json"
+        file: 'content/bio/bio.json'
+        fields:
+          - {label: Image, name: thumbnail, widget: image}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "body", widget: "markdown"}
+              
+      
