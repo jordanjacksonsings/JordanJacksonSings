@@ -1,239 +1,45 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shows — Jordan Jackson</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:700,800&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" />
-<style>
-  :root{
-    --cream:#F7F1E6;
-    --ink:#1A1A1A;
-    --red:#F0421C;
-    --line:#E2D9C8;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Poppins', sans-serif;
-  }
-  header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:32px 64px;
-    flex-wrap:wrap;
-    gap:20px;
-  }
-  .logo{
-    font-family:'Catamaran', sans-serif;
-    font-weight:800;
-    font-size:26px;
-    line-height:1.05;
-    color:var(--red);
-    text-transform:uppercase;
-  }
-  nav{
-    display:flex;
-    align-items:center;
-    gap:36px;
-    flex-wrap:wrap;
-  }
-  nav a{
-    text-decoration:none;
-    color:var(--ink);
-    font-weight:600;
-    letter-spacing:0.03em;
-    font-size:15px;
-    text-transform:uppercase;
-  }
-  nav a.active{ color:var(--red); }
-  .socials{ display:flex; gap:18px; }
-  .socials a{ color:var(--red); font-size:18px; }
-
-  main{
-    max-width:1500px;
-    margin:0 auto;
-    padding:60px 64px 40px;
-  }
-  .show-row{
-    display:grid;
-    grid-template-columns: 220px 1fr auto;
-    align-items:center;
-    gap:24px;
-    padding:34px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .show-row:first-child{ border-top:1px solid var(--line); }
-  .show-date{
-    font-weight:600;
-    font-size:20px;
-  }
-  .show-meta{
-    display:flex;
-    gap:60px;
-    font-size:18px;
-    color:var(--ink);
-  }
-  .show-meta .city{ min-width:140px; color:#4a4a4a; }
-  .btn{
-    background:var(--ink);
-    color:#fff;
-    text-decoration:none;
-    padding:14px 26px;
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    border-radius:2px;
-    white-space:nowrap;
-  }
-  .btn[aria-disabled="true"]{ opacity:0.35; pointer-events:none; }
-
-  .signup{
-    text-align:center;
-    margin:80px 0 40px;
-  }
-  .signup h2{
-    font-size:20px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    font-weight:600;
-    margin-bottom:28px;
-  }
-  .signup-form{
-    display:flex;
-    justify-content:center;
-    gap:32px;
-    flex-wrap:wrap;
-  }
-  .signup-form input{
-    background:transparent;
-    border:none;
-    border-bottom:1px solid var(--ink);
-    padding:8px 4px;
-    font-size:15px;
-    font-family:inherit;
-    width:260px;
-    color:var(--ink);
-  }
-  .signup-form input::placeholder{ color:#8a8a8a; }
-  .signup-form button{
-    background:var(--ink);
-    color:#fff;
-    border:none;
-    padding:12px 28px;
-    font-size:13px;
-    letter-spacing:0.08em;
-    font-weight:600;
-    text-transform:uppercase;
-    border-radius:2px;
-    cursor:pointer;
-  }
-
-  footer{
-    display:flex;
-    justify-content:center;
-    gap:22px;
-    padding:36px 0 48px;
-    color:var(--red);
-    font-size:18px;
-  }
-
-  @media (max-width: 760px){
-    header{ padding:24px 28px; }
-    main{ padding:36px 28px; }
-    .show-row{
-      grid-template-columns: 1fr;
-      gap:10px;
-      padding:24px 0;
-    }
-    .show-meta{ flex-direction:column; gap:4px; }
-    .btn{ width:fit-content; }
-  }
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
+    body {background-color: #f2ead9}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #e01114; -webkit-text-stroke: #e01114; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #e01114; -webkit-text-stroke: #e01114}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #101010}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #e01114}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #101010; -webkit-text-stroke: #101010; min-height: 14.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px Times; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #101010}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Songti SC'; color: #e01114; -webkit-text-stroke: #e01114}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #e01114; -webkit-text-stroke: #e01114}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #e01114}
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">JORDAN<br/>JACKSON</div>
-  <nav>
-    <a href="/music">Music</a>
-    <a href="/videos">Videos</a>
-    <a href="/shows" class="active">Shows</a>
-    <a href="/bio">Bio</a>
-  </nav>
-  <div class="socials">
-    <a href="#" aria-label="Facebook">f</a>
-    <a href="#" aria-label="Instagram">ig</a>
-  </div>
-</header>
-
-<main>
-  <div id="shows-list">
-    <!-- Show rows render here from shows.json -->
-  </div>
-
-  <div class="signup">
-    <h2>Join the list for the latest updates</h2>
-    <form class="signup-form" onsubmit="return false;">
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="E-mail" />
-      <button type="submit">Join</button>
-    </form>
-  </div>
-</main>
-
-<footer>
-  <span>f</span><span>ig</span><span>♪</span><span>✉</span>
-</footer>
-
-<script>
-  // Loads shows.json and renders rows in the same visual style as the screenshot.
-  fetch('/content/shows/shows.json')
-    .then(res => res.json())
-    .then(data => {
-      const list = document.getElementById('shows-list');
-      const shows = data.showsArray || [];
-
-      // Sort by date ascending
-      shows.sort((a, b) => {
-        const parse = d => {
-          const [day, month, year] = d.split('.');
-          return new Date(`${year}-${month}-${day}`);
-        };
-        return parse(a.date) - parse(b.date);
-      });
-
-      list.innerHTML = shows.map(show => {
-        const [day, month, year] = show.date.split('.');
-        const dateObj = new Date(`${year}-${month}-${day}`);
-        const formatted = dateObj.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
-
-        const hasLink = show.linkURL && show.linkURL.trim().length > 0;
-        const linkHTML = hasLink
-          ? `<a class="btn" href="${show.linkURL}" target="_blank" rel="noopener">${show.linkName || 'More info'}</a>`
-          : `<span class="btn" aria-disabled="true">${show.linkName || 'More info'}</span>`;
-
-        return `
-          <div class="show-row">
-            <div class="show-date">${formatted}</div>
-            <div class="show-meta">
-              <span class="city">${show.city}</span>
-              <span class="venue">${show.place}</span>
-            </div>
-            ${linkHTML}
-          </div>
-        `;
-      }).join('');
-    })
-    .catch(() => {
-      document.getElementById('shows-list').innerHTML = '<p>Shows are being updated — check back shortly.</p>';
-    });
-</script>
-
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">/JORDAN</span></p>
+<p class="p2"><span class="s1">JACKSON</span></p>
+<p class="p3"><span class="s2"><a href="file:///music">MUSIC</a></span></p>
+<p class="p3"><span class="s2"><a href="file:///videos">VIDEOS</a></span></p>
+<p class="p4"><span class="s2"><a href="file:///shows">SHOWS<span class="s3"></span></a></span></p>
+<p class="p3"><span class="s2"><a href="file:///bio">BIO</a></span></p>
+<p class="p2"><span class="s2">f</span></p>
+<p class="p2"><span class="s2">ig</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 28.0px 0.0px; text-align: center; font: 18.0px Times; color: #101010; -webkit-text-stroke: #101010"><span class="s1"><b>JOIN THE LIST FOR THE LATEST UPDATES</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1"><b>JOIN</b></span></p>
+<p class="p2"><span class="s1">f</span></p>
+<p class="p2"><span class="s1">ig</span></p>
+<p class="p8"><span class="s1">♪</span></p>
+<p class="p9"><span class="s1">✉</span></p>
 </body>
 </html>
