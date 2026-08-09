@@ -2,22 +2,25 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: images/uploads
+public_folder: /images/uploads
 
 collections:
-  - label: "Shows"
-    name: "shows"
-    format: "json"
-    file: "content/shows/shows.json"
-    fields:
-      - label: "Shows"
-        name: "showsArray"
-        widget: "list"
-        summary: "{{fields.date}} — {{fields.city}}"
+  - label: Shows
+    name: shows
+    files:
+      - label: Shows
+        name: shows
+        file: content/shows/shows.json
+        format: json
         fields:
-          - {label: "Date", name: "date", widget: "datetime", dateFormat: "DD.MM.YYYY", format: "DD.MM.YYYY", timeFormat: false}
-          - {label: "City", name: "city", widget: "string"}
-          - {label: "Venue", name: "place", widget: "string"}
-          - {label: "Button text", name: "linkName", widget: "string", default: "More info"}
-          - {label: "Link URL", name: "linkURL", widget: "string", required: false}
+          - label: Shows
+            name: showsArray
+            widget: list
+            summary: "{{fields.date}} — {{fields.city}}"
+            fields:
+              - {label: Date, name: date, widget: string}
+              - {label: City, name: city, widget: string}
+              - {label: Venue, name: place, widget: string}
+              - {label: Button text, name: linkName, widget: string, default: More info}
+              - {label: Link URL, name: linkURL, widget: string, required: false}
