@@ -18,4 +18,26 @@
   <nav><a href="/music">Music</a><a href="/videos">Videos</a><a href="/shows" class="active">Shows</a><a href="/bio">Bio</a></nav>
   <div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">♪</a><a href="#">s</a><a href="#">sc</a><a href="#">✉</a></div>
 </header>
-<main><div
+<main><div id="shows-list"></div>
+<div class="signup"><h2>Join the list for the latest updates</h2>
+<form class="signup-form" onsubmit="return false;"><input type="text" placeholder="Name"/><input type="email" placeholder="E-mail"/><button class="btn">Join</button></form></div></main>
+<footer><a href="#">f</a><a href="#">ig</a><a href="#">♪</a><a href="#">s</a><a href="#">✉</a></footer>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+fetch('/content/shows/shows.json').then(r=>r.json()).then(d=>{
+  const shows=(d.showsArray||[]).sort((a,b)=>{
+    const p=s=>{const[dd,mm,yy]=s.split('.');return new Date(`${yy}-${mm}-${dd}`);};
+    return p(a.date)-p(b.date);
+  });
+  document.getElementById('shows-list').innerHTML=shows.length?shows.map(s=>{
+    const[dd,mm,yy]=s.date.split('.');
+    const fmt=new Date(`${yy}-${mm}-${dd}`).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+    return `<div class="show-row">
+      <div class="show-date">${fmt}</div>
+      <div class="show-meta"><span class="show-city">${s.city}</span><span>${s.place}</span></div>
+      ${s.linkURL?`<a class="btn" href="${s.linkURL}" target="_blank">${s.linkName||'More info'}</a>`:`<span class="btn btn-disabled">${s.linkName||'More info'}</span>`}
+    </div>`;
+  }).join(''):'<p style="padding:40px 0">No upcoming shows.</p>';
+}).catch(()=>document.getElementById('shows-list').innerHTML='<p style="padding:40px 0">Shows are being updated — check back shortly.</p>');
+</script>
+</body></html>
