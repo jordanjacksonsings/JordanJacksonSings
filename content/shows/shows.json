@@ -5,6 +5,12 @@
       "date": "september ",
       "city": "london",
       "place": "tbc"
+    },
+    {
+      "linkName": "More info",
+      "date": "test concert",
+      "city": "test",
+      "place": "test"
     }
   ]
 }
