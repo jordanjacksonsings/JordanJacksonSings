@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Shows — Jordan Jackson</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"/>
+<link rel="stylesheet" href="/style.css"/>
+<style>
+.show-row{display:grid;grid-template-columns:200px 1fr auto;align-items:center;gap:24px;padding:30px 0;border-bottom:1px solid var(--line);}
+.show-row:first-child{border-top:1px solid var(--line);}
+.show-date{font-weight:600;font-size:18px;}
+.show-meta{display:flex;gap:48px;font-size:16px;}
+.show-city{color:#555;min-width:120px;}
+.btn-disabled{opacity:0.35;pointer-events:none;}
+@media(max-width:760px){.show-row{grid-template-columns:1fr;gap:8px;}.show-meta{flex-direction:column;gap:4px;}}
+</style>
+</head><body>
+<header>
+  <a href="/"><img src="/images/uploads/logo.png" alt="Jordan Jackson" style="height:60px;"/></a>
+  <nav><a href="/music">Music</a><a href="/videos">Videos</a><a href="/shows" class="active">Shows</a><a href="/bio">Bio</a></nav>
+  <div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">♪</a><a href="#">s</a><a href="#">sc</a><a href="#">✉</a></div>
+</header>
+<main><div
